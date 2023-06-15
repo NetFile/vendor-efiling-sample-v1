@@ -1,0 +1,48 @@
+﻿<Window x:Class="VendorEfilingSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="NetFile e-Filing Sample for Vendors" Height="475" Width="525" Closing="Window_Closing">
+    <Grid x:Name="grdMain">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="320" />
+            <RowDefinition Height="88*" />
+        </Grid.RowDefinitions>
+        <Grid>
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="97,12,0,0" Name="txtFilePath" VerticalAlignment="Top" Width="369" />
+            <Label Content="File to Upload" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="label1" VerticalAlignment="Top" />
+            <Button Content="..." Height="23" HorizontalAlignment="Left" Margin="470,11,0,0" Name="btnSelect" VerticalAlignment="Top" Width="21" Click="btnSelect_Click" />
+            <Label Content="Root URL" Height="28" HorizontalAlignment="Left" Margin="12,46,0,0" Name="label2" VerticalAlignment="Top" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="97,46,0,0" Name="txtRemote" VerticalAlignment="Top" Width="369" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="97,80,0,0" Name="txtFilerId" VerticalAlignment="Top" Width="120" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="97,114,0,0" Name="txtPassword" VerticalAlignment="Top" Width="120" />
+            <Label Content="Filer ID" Height="28" HorizontalAlignment="Left" Margin="12,80,0,0" Name="label3" VerticalAlignment="Top" />
+            <Label Content="Filer Password" Height="28" HorizontalAlignment="Left" Margin="12,112,0,0" Name="label4" VerticalAlignment="Top" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="97,151,0,0" Name="txtReplyTo" VerticalAlignment="Top" Width="367" />
+            <Label Content="Respond To" Height="28" HorizontalAlignment="Left" Margin="12,151,0,0" Name="label5" VerticalAlignment="Top" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="97,189,0,0" Name="txtSupercedes" VerticalAlignment="Top" Width="120" />
+            <Label Content="Supercedes" Height="28" HorizontalAlignment="Left" Margin="12,189,0,0" Name="label6" VerticalAlignment="Top" />
+            <Button Content="Submit this E-Filing" Height="23" HorizontalAlignment="Left" Margin="344,189,0,0" Name="btnSubmit" VerticalAlignment="Top" Width="120" Click="btnSubmit_Click" />
+            <Label Content="Vendor ID" Height="28" HorizontalAlignment="Left" Margin="259,80,0,0" Name="label7" VerticalAlignment="Top" />
+            <Label Content="Vendor PIN" Height="28" HorizontalAlignment="Left" Margin="259,112,0,0" Name="label8" VerticalAlignment="Top" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="344,80,0,0" Name="txtVendorId" VerticalAlignment="Top" Width="120" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="344,114,0,0" Name="txtVendorPIN" VerticalAlignment="Top" Width="120" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="281,189,0,0" Name="txtSequence" VerticalAlignment="Top" Width="43" />
+            <Label Content="Sequence" Height="28" HorizontalAlignment="Left" Margin="223,187,0,0" Name="label9" VerticalAlignment="Top" />
+            <Label Content="Signer #1 (Id / PIN)" Height="28" HorizontalAlignment="Left" Margin="18,248,0,0" x:Name="lblSigner1" VerticalAlignment="Top" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="158,248,0,0" x:Name="txtSignerId1" VerticalAlignment="Top" Width="105" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="280,248,0,0" x:Name="txtSignerPin1" VerticalAlignment="Top" Width="73" />
+            <Label Content="Signer #2 (Id / PIN)" Height="28" HorizontalAlignment="Left" Margin="18,276,0,0" x:Name="lblSigner2" VerticalAlignment="Top" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="158,276,0,0" x:Name="txtSignerId2" VerticalAlignment="Top" Width="105" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="280,276,0,0" x:Name="txtSignerPin2" VerticalAlignment="Top" Width="73" />
+            <Label Content="(optional)" Height="28" HorizontalAlignment="Left" Margin="361,246,0,0" x:Name="lblOptional1" VerticalAlignment="Top" />
+            <Label Content="(optional)" Height="28" HorizontalAlignment="Left" Margin="361,274,0,0" x:Name="lblOptional2" VerticalAlignment="Top" />
+            <RadioButton x:Name="rb11" Content="v1.1" HorizontalAlignment="Left" Margin="158,226,0,0" VerticalAlignment="Top" GroupName="Version" IsChecked="True" Checked="rb11_Checked"/>
+            <RadioButton x:Name="rb10" Content="v1.0" HorizontalAlignment="Left" Margin="223,226,0,0" VerticalAlignment="Top" GroupName="Version" Checked="rb10_Checked"/>
+                <Label Content="API Version" Height="28" HorizontalAlignment="Left" Margin="18,220,0,0" x:Name="label6_Copy4" VerticalAlignment="Top" />
+        </Grid>
+        <Grid Grid.Column="0" Grid.Row="1">
+            <TextBox Height="Auto"  HorizontalAlignment="Stretch" Name="txtLog" VerticalAlignment="Stretch" Width="Auto" 
+                     TextWrapping="Wrap" AcceptsReturn="True" UndoLimit="0" IsReadOnly="True" />
+        </Grid>
+    </Grid>
+</Window>
